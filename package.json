@@ -1,0 +1,27 @@
+{
+  "name": "templates",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://yevhen-yakymenko.github.io/templates",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /templates/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yevhen-yakymenko/templates.git"
+  },
+  "keywords": [],
+  "author": "Yevhen Yakymenko <yevhen.yakymenko.fed@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

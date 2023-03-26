@@ -1,0 +1,114 @@
+.wrapper {
+  padding: 50px;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #303640;
+  overflow: clip;
+}
+
+.menu {
+  position: relative;
+  background-color: #303640;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.menu__list {
+  padding: 30px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.menu__item {
+  position: relative;
+  overflow: hidden;
+  color: #a6aab4;
+  transition: color 800ms ease 0ms;
+
+  :hover,
+  ._active {
+    color: #fff;
+  }
+}
+
+.menu__link {
+  padding: 20px 80px 20px 30px;
+  display: block;
+
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: currentColor;
+}
+
+.menu__active {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+
+  & span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0 5px 5px 0;
+    transition: all 500ms ease 0s;
+
+    // height: 50px;
+    // background-color: #fff;
+  }
+}
+
+/* Animation on load */
+
+.menu {
+  border: 1px solid transparent;
+  box-shadow: inset 0px 0px 15px 0px transparent;
+}
+
+.loaded .menu {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  transition: all 1000ms ease 1500ms;
+}
+
+.menu__link {
+  transform: translate(-100%, 0px);
+}
+
+.loaded .menu__link {
+  transform: translate(0px, 0px);
+  transition: transform 1000ms ease;
+}
+
+.loaded .menu__item:nth-child(1) .menu__link {
+  transition-delay: 200ms;
+}
+
+.loaded .menu__item:nth-child(2) .menu__link {
+  transition-delay: 400ms;
+}
+
+.loaded .menu__item:nth-child(3) .menu__link {
+  transition-delay: 600ms;
+}
+
+.loaded .menu__item:nth-child(4) .menu__link {
+  transition-delay: 800ms;
+}
+
+.menu__active {
+  transform: translate(-100%, 0px);
+}
+
+.loaded .menu__active {
+  transform: translate(0px, 0px);
+  transition: transform 500ms ease 2000ms;
+}
